@@ -129,3 +129,6 @@ alias gs="git status"
 
 # docker config
 alias doc="docker"
+
+# vim alias
+alias vim="nvim"
