@@ -130,5 +130,10 @@ alias gs="git status"
 # docker config
 alias doc="docker"
 
+# java config
+alias jc="javac"
+alias j="java"
+alias jj="java -jar"
+
 # vim alias
 alias vim="nvim"
