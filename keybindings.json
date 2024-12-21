@@ -54,6 +54,11 @@
     "when": "workbench.scm.active"
   },
   {
+    "key": "oem_3 oem_1",
+    "command": "workbench.panel.chat",
+    "when": "workbench.panel.chat.view.copilot.active"
+  },
+  {
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active"
