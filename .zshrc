@@ -121,6 +121,10 @@ unset __conda_setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="/home/linuxbrew/.linuxbrew/opt/node@20/bin:$PATH"
 
+# nvim config
+export PATH="$PATH:/opt/nvim-linux64/bin"
+alias vim="nvim"
+
 # git config
 alias ga="git add"
 alias gc="git commit -m"
@@ -135,5 +139,3 @@ alias jc="javac"
 alias j="java"
 alias jj="java -jar"
 
-# vim alias
-alias vim="nvim"
