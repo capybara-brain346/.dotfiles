@@ -1,8 +1,9 @@
 {
-  "workbench.iconTheme": "bearded-icons",
   "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe",
   "git.openRepositoryInParentFolders": "never",
-  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontLigatures": false,
   "liveServer.settings.donotShowInfoMsg": true,
@@ -10,8 +11,10 @@
   "liveServer.settings.donotVerifyTags": true,
   "code-runner.runInTerminal": true,
   "git.ignoreMissingGitWarning": true,
-  "workbench.settings.applyToAllProfiles": ["editor.fontFamily"],
-  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
+  "editor.fontFamily": "JetBrains Mono",
   "editor.codeLensFontFamily": "Cascadia Code",
   "debug.console.fontFamily": "Cascadia Code",
   "terminal.integrated.tabs.defaultColor": "terminal.ansiWhite",
@@ -19,9 +22,7 @@
   "[css]": {
     "editor.suggest.insertMode": "replace"
   },
-  "workbench.colorCustomizations": {},
   "editor.minimap.enabled": false,
-  "editor.fontSize": 13,
   "accessibility.dimUnfocused.opacity": 1,
   "git.terminalGitEditor": true,
   "editor.fontWeight": "normal",
@@ -32,7 +33,7 @@
   "editor.accessibilitySupport": "off",
   "editor.fontVariations": false,
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "git.confirmSync": false,
   "files.autoSave": "afterDelay",
@@ -76,10 +77,8 @@
     "*.sdb": "${capture}.${extname}-*",
     "*.s3db": "${capture}.${extname}-*"
   },
-  "workbench.productIconTheme": "material-product-icons",
-  "editor.wordWrap": "on",
   "[java]": {
-    "editor.defaultFormatter": "redhat.java"
+    "editor.defaultFormatter": "Oracle.oracle-java"
   },
   "go.toolsManagement.autoUpdate": true,
   "redhat.telemetry.enabled": false,
@@ -93,7 +92,6 @@
     "vscode-insiders",
     "docker-desktop"
   ],
-  "diffEditor.hideUnchangedRegions.enabled": true,
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -102,11 +100,43 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.activityBar.location": "hidden",
-  "window.menuBarVisibility": "compact",
   "settingsSync.ignoredSettings": [],
-  "workbench.colorTheme": "GitHub Dark",
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
-  "workbench.statusBar.visible": false
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "editor.cursorStyle": "block",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.activityBar.location": "hidden",
+  "window.menuBarVisibility": "compact",
+  "editor.fontSize": 12,
+  "editor.scrollbar.vertical": "hidden",
+  "workbench.tree.renderIndentGuides": "onHover",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.reduceMotion": "on",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.wordWrap": "on",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.cursorBlinking": "phase",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "remoteHub.commitDirectlyWarning": "off",
+  "window.zoomLevel": 2,
+  "editor.lineHeight": 1.5,
 }
