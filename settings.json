@@ -4,7 +4,7 @@
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "git.enableSmartCommit": true,
@@ -14,7 +14,7 @@
   "workbench.settings.applyToAllProfiles": [
     "editor.fontFamily"
   ],
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.codeLensFontFamily": "Cascadia Code",
   "debug.console.fontFamily": "Cascadia Code",
   "terminal.integrated.tabs.defaultColor": "terminal.ansiWhite",
@@ -145,11 +145,14 @@
   "vim.cursorStylePerMode.visualblock": "block",
   "vim.cursorStylePerMode.visualline": "block",
   "window.zoomLevel": 2,
-  "workbench.colorTheme": "Black",
   "editor.fontSize": 12,
   "editor.renderLineHighlight": "gutter",
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#417aff",
     "editor.lineHighlightBorder": "#000000",
-  }
+    "statusBarItem.remoteBackground": "#417aff",
+    "statusBarItem.remoteForeground": "#000000"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "Black",
 }
