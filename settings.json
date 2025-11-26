@@ -14,7 +14,7 @@
     "workbench.settings.applyToAllProfiles": [
         "editor.fontFamily"
     ],
-    "editor.fontFamily": "Cascadia Code",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.codeLensFontFamily": "Cascadia Code",
     "debug.console.fontFamily": "Cascadia Code",
     "terminal.integrated.tabs.defaultColor": "terminal.ansiWhite",
@@ -97,14 +97,10 @@
     },
     "editor.lineNumbers": "relative",
     "java.configuration.runtimes": [],
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
     "settingsSync.ignoredSettings": [],
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "editor.cursorStyle": "block",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -127,12 +123,12 @@
     "remoteHub.commitDirectlyWarning": "off",
     "editor.lineHeight": 1.6,
     "terminal.integrated.cursorStyleInactive": "block",
-    "vim.cursorStylePerMode.insert": "block",
+    "vim.cursorStylePerMode.insert": "line",
     "vim.cursorStylePerMode.normal": "block",
     "vim.cursorStylePerMode.replace": "block",
-    "vim.cursorStylePerMode.visual": "block",
-    "vim.cursorStylePerMode.visualblock": "block",
-    "vim.cursorStylePerMode.visualline": "block",
+    "vim.cursorStylePerMode.visual": "block-outline",
+    "vim.cursorStylePerMode.visualblock": "block-outline",
+    "vim.cursorStylePerMode.visualline": "block-outline",
     "editor.renderLineHighlight": "gutter",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBorder": "#417aff",
@@ -154,7 +150,7 @@
         "terminalEditor": false,
         "default": true
     },
-    "editor.fontSize": 13,
+    "editor.fontSize": 15,
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
@@ -162,5 +158,6 @@
         "scminput": false
     },
     "terminal.integrated.allowChords": false,
+    "editor.largeFileOptimizations": false,
     "workbench.layoutControl.enabled": false
 }
