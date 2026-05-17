@@ -1,6 +1,9 @@
-" Enable relative line numbers
-set relativenumber
+" ==========================================
+" UI & Appearance
+" ==========================================
+" Enable hybrid line numbers
 set number
+set relativenumber
 
 " Enable syntax highlighting
 syntax on
@@ -27,23 +30,49 @@ highlight LineNr       guifg=#5f5f5f
 highlight CursorLineNr guifg=#af87ff
 highlight MatchParen   guibg=#262626 guifg=#d78700
 
-" General settings
+" Enable mouse support
+set mouse=a
+
+
+" ==========================================
+" Tabs & Indentation
+" ==========================================
 set tabstop=4         " Number of spaces a <Tab> counts for
 set shiftwidth=4      " Number of spaces for each indentation level
+set softtabstop=4     " Number of spaces a <Tab> counts for while editing
 set expandtab         " Use spaces instead of tabs
-set autoindent        " Copy indent from the current line when starting a new line
-set encoding=utf-8    " Set default encoding to UTF-8
+set autoindent        " Copy indent from current line when starting a new line
 
-" Make searching easier
+
+" ==========================================
+" Search Settings
+" ==========================================
 set hlsearch          " Highlight all search matches
 set incsearch         " Show match as search pattern is typed
 set ignorecase        " Case-insensitive search
 set smartcase         " Case-sensitive search if uppercase letters are used
 
-" Enable mouse support
-set mouse=a
 
-" Prevent swap files and backups from cluttering directories
+" ==========================================
+" Backups & System
+" ==========================================
+set encoding=utf-8    " Set default encoding to UTF-8
 set noswapfile        " Disable swap file creation
 set nobackup          " Disable backup file creation
 set nowritebackup     " Disable backup file during writing
+
+
+" ==========================================
+" Key Mappings
+" ==========================================
+" Press Space to enter Command Mode
+nnoremap <space> :
+vnoremap <space> :
+
+" Move current line up or down with Alt + Up / Alt + Down (normal mode)
+nnoremap <A-Up>   :m .-2<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+
+" Move selected lines up or down with Alt + Up / Alt + Down (visual mode)
+vnoremap <A-Up>   :m '<-2<CR>gv=gv
+vnoremap <A-Down> :m '>+1<CR>gv=gv
