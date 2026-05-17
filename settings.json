@@ -151,13 +151,52 @@
         "default": true
     },
     "editor.fontSize": 15,
+    "terminal.integrated.allowChords": false,
+    "editor.largeFileOptimizations": false,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "chat.tips.enabled": false,
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
         "markdown": false,
         "scminput": false
     },
-    "terminal.integrated.allowChords": false,
-    "editor.largeFileOptimizations": false,
-    "workbench.layoutControl.enabled": false
+    "workbench.activityBar.compact": true,
+    "window.commandCenter": false,
+    "workbench.browser.showInTitleBar": false,
+    "chat.editing.confirmEditRequestRemoval": false,
+    "chat.tools.urls.autoApprove": {
+        "https://code.visualstudio.com": true,
+        "https://github.com/microsoft/vscode/wiki/*": true,
+        "https://openrouter.ai": true,
+        "https://openrouter.ai/docs/api-reference/parameters": true,
+        "https://openrouter.ai/docs/api-reference": true,
+        "https://openrouter.ai/docs": true,
+        "https://developers.cloudflare.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
+    },
+    "chat.agent.maxRequests": 100,
+    "chat.tools.terminal.autoApprove": {
+        "npx tsc": true
+    },
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        ".claude/rules": true,
+        "~/.copilot/instructions": true,
+        "~/.claude/rules": true,
+        "/tmp/postman-collections-post-response.instructions.md": true,
+        "/tmp/postman-collections-pre-request.instructions.md": true,
+        "/tmp/postman-folder-post-response.instructions.md": true,
+        "/tmp/postman-folder-pre-request.instructions.md": true,
+        "/tmp/postman-http-request-post-response.instructions.md": true,
+        "/tmp/postman-http-request-pre-request.instructions.md": true
+    },
+    "chat.mcp.gallery.enabled": true,
+    "chat.disableAIFeatures": true,
+    "postman.mcp.notifications.postmanMCP": false
 }
