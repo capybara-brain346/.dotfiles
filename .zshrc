@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,39 +103,37 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/capybara/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/capybara/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/capybara/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/capybara/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# pnpm
+export PNPM_HOME="/home/capybara/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export PATH="/home/linuxbrew/.linuxbrew/opt/node@20/bin:$PATH"
+# alias
+alias sz="source ~/.zshrc"
+alias prd="pnpm run dev"
+alias v="nvim"
+alias vt="cd ~ && nvim me/tasks.txt"
+alias vp="cd ~ && nvim me/plan.txt"
+alias learn="cat ~/me/notes/focusing-unconsious-mind.txt"
+alias ll="ls -l"
+alias cls="clear"
 
-# nvim config
-export PATH="$PATH:/opt/nvim-linux64/bin"
-alias vim="nvim"
+# Nvim
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-# git config
-alias ga="git add"
-alias gc="git commit -m"
-alias gp="git push"
-alias gs="git status"
+SCIRA_API_KEY="sk-scira-cPZiDIPTvTgWAvxWQYfCdqErxUFIoXVSAJnzCDwSQyairJqbynHgMDtvaJPSrNjg"
 
-# docker config
-alias doc="docker"
+export CUDA_HOME=/usr
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
-# java config
-alias jc="javac"
-alias j="java"
-alias jj="java -jar"
+. "$HOME/.local/bin/env"
 
+# opencode
+export PATH=/home/capybara/.opencode/bin:$PATH
+
+# claude code
+alias cc="claude"
