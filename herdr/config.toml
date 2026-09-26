@@ -1,0 +1,43 @@
+onboarding = false
+
+# Match ~/.tmux.conf where Herdr has an equivalent.
+[terminal]
+new_cwd = "follow"
+
+[keys]
+prefix = "ctrl+s"
+reload_config = "prefix+r"
+switch_tab = "prefix+1..9"
+toggle_sidebar = "prefix+b"
+
+# Standard tmux pane controls, while retaining Herdr's defaults.
+focus_pane_left = ["prefix+h", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
+split_vertical = ["prefix+v", "prefix+percent"]
+split_horizontal = ["prefix+minus", "prefix+quote"]
+last_pane = "prefix+semicolon"
+resize_pane_left = "prefix+ctrl+left"
+resize_pane_down = "prefix+ctrl+down"
+resize_pane_up = "prefix+ctrl+up"
+resize_pane_right = "prefix+ctrl+right"
+
+# tmux: prefix+g creates a tiled 2x2 layout from the focused pane.
+[[keys.command]]
+key = "prefix+g"
+type = "shell"
+command = "herdr pane split --current --direction right --focus && herdr pane split --current --direction down --focus && herdr pane focus --current --direction left && herdr pane split --current --direction down --focus"
+
+[ui]
+mouse_capture = true
+pane_outer_borders = false
+pane_gaps = false
+
+status_indicators = "dots"
+[ui.toast]
+delivery = "system"
+
+[theme]
+name = "gruvbox"
+auto_switch = false

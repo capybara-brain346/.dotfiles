@@ -1,0 +1,10 @@
+import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+
+export default function (pi: ExtensionAPI) {
+  pi.on("ui_prompt_start", (event, ctx) => {
+    if (ctx.mode === "tui") pi.events.emit("herdr:blocked", { active: true, label: event.title ?? "Pi needs input" });
+  });
+  pi.on("ui_prompt_end", (_event, ctx) => {
+    if (ctx.mode === "tui") pi.events.emit("herdr:blocked", { active: false });
+  });
+}

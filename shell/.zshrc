@@ -81,12 +81,8 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+# Preferred editor
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -103,26 +99,15 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# pnpm
-export PNPM_HOME="/home/capybara/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # alias
 alias sz="source ~/.zshrc"
 alias prd="pnpm run dev"
 alias v="nvim"
-alias vt="cd ~ && nvim me/tasks.txt"
-alias vp="cd ~ && nvim me/plan.txt"
+alias vt="cd ~ && vim me/tasks.txt"
+alias vp="cd ~ && vim me/plan.txt"
 alias learn="cat ~/me/notes/focusing-unconsious-mind.txt"
 alias ll="ls -l"
 alias cls="clear"
-
-# Nvim
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 export CUDA_HOME=/usr
 export PATH=$CUDA_HOME/bin:$PATH
@@ -130,8 +115,39 @@ export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
 . "$HOME/.local/bin/env"
 
+# coding agents
+alias cc="claude"
+alias oc="opencode"
+alias cx="codex"
+
+# PNPM
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *:"$PNPM_HOME/bin":*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+
+# Flybase GPU tower
+alias rtx="ssh rtx5090@100.126.57.59"
+alias oc=opencode
+
+# bun completions
+[ -s "/home/capybara/.bun/_bun" ] && source "/home/capybara/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# vibe kanban
+alias nvb="npx vibe-kanban"
+
+# Superset
+alias ss="./superset-1.18.1-x86_64.AppImage --no-sandbox"
+
 # opencode
 export PATH=/home/capybara/.opencode/bin:$PATH
 
-# claude code
-alias cc="claude"
+# Herdr
+alias hr="herdr"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"

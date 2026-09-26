@@ -1,0 +1,15 @@
+# Do not commit credentials or generated runtime data.
+.env
+.env.*
+**/auth.json
+**/models-store.json
+**/trust.json
+**/session.json
+**/sessions/
+**/node_modules/
+**/.git/
+**/*.sock
+**/*.log
+**/*.pem
+**/*.key
+**/__pycache__/

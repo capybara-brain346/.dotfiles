@@ -1,0 +1,27 @@
+{
+  "lastChangelogVersion": "0.87.1",
+  "theme": "edgerunners",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6-sol",
+  "defaultThinkingLevel": "high",
+  "tuiMode": "regular",
+  "packages": [
+    "git:github.com/badlogic/pi-doom",
+    "npm:pi-web-search",
+    "git:github.com/DietrichGebert/ponytail",
+    "npm:pi-quote-picker"
+  ],
+  "terminal": {
+    "imageWidthCells": 120,
+    "showTerminalProgress": true
+  },
+  "enableSkillCommands": false,
+  "editorPaddingX": 0,
+  "outputPad": 1,
+  "showCacheMissNotices": true,
+  "doubleEscapeAction": "tree",
+  "defaultProjectTrust": "always",
+  "fullscreenScrollbar": "auto",
+  "fullscreenCopyOnSelect": true,
+  "hideThinkingBlock": true
+}

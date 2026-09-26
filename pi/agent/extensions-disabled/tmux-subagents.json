@@ -1,0 +1,30 @@
+{
+  "tmuxSessionPrefix": "pi-subagents",
+  "windowName": "agents",
+  "maxAgents": 8,
+  "defaultProfile": "general",
+  "defaultModel": "openai-codex/gpt-5.6-luna",
+  "defaultThinkingLevel": "xhigh",
+  "healthPollMs": 2000,
+  "dashboardMaxRows": 5,
+  "profiles": {
+    "general": {
+      "description": "General coding helper",
+      "systemPrompt": "Work independently. Report concrete findings, changed files, and tests."
+    },
+    "researcher": {
+      "description": "Read-only codebase investigator",
+      "tools": ["read", "bash", "grep", "find", "ls"],
+      "systemPrompt": "Investigate thoroughly. Do not modify files. Return evidence and recommendations."
+    },
+    "reviewer": {
+      "description": "Read-only bug and security reviewer",
+      "tools": ["read", "grep", "find", "ls"],
+      "systemPrompt": "Review correctness, regressions, security, and missing tests. Do not modify files."
+    },
+    "implementer": {
+      "description": "Focused implementation agent",
+      "systemPrompt": "Implement only the assigned task. Run relevant tests and report results."
+    }
+  }
+}
